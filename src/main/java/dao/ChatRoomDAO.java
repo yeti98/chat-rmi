@@ -11,9 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ChatRoomDAO {
-    private DatabaseConnection databaseConnection = DatabaseConnection.getInstance();
-    private Connection connection = databaseConnection.getConnection();
+    private Connection connection = DatabaseConnection.getInstance().getConnection();
     private UserDAO userDAO = new UserDAO();
+    private MessageDAO messageDAO = new MessageDAO();
 
     public ChatRoomDAO() {
     }
@@ -44,6 +44,9 @@ public class ChatRoomDAO {
                     chatRooms.add(chatRoom);
                     chatRoom.setClients(new ArrayList<>());
                 }
+            }
+            for(ChatRoom chatRoom : chatRooms){
+                chatRoom.setMessages(messageDAO.getMessagesByRoomId(chatRoom.getId()));
             }
             return chatRooms;
         } catch (SQLException e) {

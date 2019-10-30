@@ -6,7 +6,6 @@ import model.Message;
 public class Main extends javax.swing.JFrame {
 
     private Thread th;
-    private int currentID = 0;
 
     public Main() {
     }
@@ -26,21 +25,21 @@ public class Main extends javax.swing.JFrame {
                         System.out.println(ms);
                         String status = ms.getStatus();
                         if (status.equals("Message")) {
-                            getMessage(ms.getID(), ms.getMessage());
+                            getMessage();
                         } else if (status.equals("New")) {
-                            getMessage(ms.getID(), ms.getMessage());
+                            getMessage();
                         } else if (status.equals("Photo")) {
-                            getMessage(ms.getID(), ms.getMessage());
+                            getMessage();
                         } else if (status.equals("File")) {
-                            getMessage(ms.getID(), ms.getMessage());
+                            getMessage();
                         } else if (status.equals("Error")) {
-                            getMessage(ms.getID(), ms.getMessage());
+                            getMessage();
                         } else if (status.equals("Emoji")) {
-                            getMessage(ms.getID(), ms.getMessage());
+                            getMessage();
                         } else if (status.equals("GetFile")) {
-                            getMessage(ms.getID(), ms.getMessage());
+                            getMessage();
                         } else if (status.equals("Sound")) {
-                            getMessage(ms.getID(), ms.getMessage());
+                            getMessage();
                         }
                     }
                 } catch (Exception e) {
@@ -60,9 +59,8 @@ public class Main extends javax.swing.JFrame {
     }
 
 
-    private void getMessage(int ID, String ms) {
-        System.out.println("Message " + ms);
-        System.out.println("ID" + ID);
+    private void getMessage() {
+
     }
 
 }

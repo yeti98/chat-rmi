@@ -1,17 +1,24 @@
 package model;
 
-import javax.swing.*;
 import java.io.Serializable;
+import java.sql.Timestamp;
 
-public class Message implements Serializable {
+public class Message implements Serializable, Comparable<Message> {
 
+    private int id;
     private String status;
-    private int ID;
     private User user;
-    private String createAt;
-    private String message;
-    private ImageIcon image;
-    private byte[] data;
+    private Timestamp createAt;
+    private String content;
+    private int roomId;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public User getUser() {
         return user;
@@ -21,11 +28,11 @@ public class Message implements Serializable {
         this.user = user;
     }
 
-    public String getCreateAt() {
+    public Timestamp getCreateAt() {
         return createAt;
     }
 
-    public void setCreateAt(String createAt) {
+    public void setCreateAt(Timestamp createAt) {
         this.createAt = createAt;
     }
 
@@ -37,37 +44,26 @@ public class Message implements Serializable {
         this.status = status;
     }
 
-    public int getID() {
-        return ID;
+
+    public String getContent() {
+        return content;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public int getRoomId() {
+        return roomId;
+    }
+
+    public void setRoomId(int roomId) {
+        this.roomId = roomId;
     }
 
 
-    public String getMessage() {
-        return message;
+    @Override
+    public int compareTo(Message message) {
+        return (int) (this.getCreateAt().getTime() - message.getCreateAt().getTime());
     }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public byte[] getData() {
-        return data;
-    }
-
-    public void setData(byte[] data) {
-        this.data = data;
-    }
-
-    public ImageIcon getImage() {
-        return image;
-    }
-
-    public void setImage(ImageIcon image) {
-        this.image = image;
-    }
-
 }

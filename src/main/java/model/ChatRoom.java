@@ -1,6 +1,7 @@
 package model;
 
 import control.MessageController;
+import utils.Pair;
 
 import javax.swing.*;
 import java.io.Serializable;
@@ -16,6 +17,7 @@ public class ChatRoom implements Serializable {
     private int Id;
     private MessageController messageController;
     private List<User> members = new ArrayList<>();
+    private List<Pair<User, Message>> messages = new ArrayList<>();
 
     public ChatRoom() {
     }
@@ -94,6 +96,14 @@ public class ChatRoom implements Serializable {
     public int addClient(Client client) {
         this.clients.add(client);
         return clientID++;
+    }
+
+    public List<Pair<User, Message>> getMessages() {
+        return messages;
+    }
+
+    public void setMessages(List<Pair<User, Message>> messages) {
+        this.messages = messages;
     }
 
     @Override

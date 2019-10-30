@@ -1,28 +1,25 @@
 package control;
 
+import dao.MessageDAO;
 import model.Friend;
 import model.Message;
 import model.User;
 
 import javax.swing.*;
+import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.sql.Timestamp;
 import java.util.HashMap;
 
 public class MessageController {
-
-
     private static final String[] fileSizeUnits = {"bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"};
     private HashMap<Integer, Friend> friends = new HashMap<>();
     private Socket client;
     private ObjectOutputStream out;
     private ObjectInputStream in;
-    private int myID;
-    private String time;
-    private JFrame fram;
+    private MessageDAO messageDAO = new MessageDAO();
 
     public static String[] getFileSizeUnits() {
         return fileSizeUnits;
@@ -69,59 +66,33 @@ public class MessageController {
         this.in = in;
     }
 
-    public int getMyID() {
-        return myID;
-    }
 
-    public void setMyID(int myID) {
-        this.myID = myID;
-    }
+    public void sendMessage(Message message) {
+        try {
+            this.out.writeObject(message);
+            this.out.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
-    }
-
-    public JFrame getFram() {
-        return fram;
-    }
-
-    public void setFram(JFrame fram) {
-        this.fram = fram;
-    }
-
-    public void sendMessage(Message message) throws Exception {
-        message.setStatus("Message");
-        message.setID(this.getMyID());
-        SimpleDateFormat df = new SimpleDateFormat("hh:mm aa");
-        String t = df.format(new Date());
-        message.setCreateAt(t);
-        this.out.writeObject(message);
-        this.out.flush();
     }
 
     public void connect(int i, User user, String IP) throws Exception {
         client = new Socket(IP, 5000);
         this.out = new ObjectOutputStream(client.getOutputStream());
         this.in = new ObjectInputStream(client.getInputStream());
-        SimpleDateFormat df = new SimpleDateFormat("hh:mm aa");
-        String t = df.format(new Date());
-//        Message ms = new Message();
-//        ms.setStatus("New");
-//        ms.setImage(null);
-//        ms.setName(userName + "!" + t);
         out.writeObject(new Integer(i));
         Message message = new Message();
         message.setStatus("New");
-        message.setImage(null);
         message.setUser(user);
-        message.setCreateAt(t);
+        message.setRoomId(i);
+        message.setCreateAt(new Timestamp(new java.util.Date().getTime()));
         out.writeObject(message);
         out.flush();
-        time = t;
     }
+
+    public boolean saveMessage(Message ms) {
+        return messageDAO.saveMessage(ms);
+    }
+
 }

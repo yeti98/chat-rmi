@@ -10,9 +10,14 @@ import model.ChatRoom;
 import model.Message;
 import model.User;
 import rmi.IRMI;
+import utils.DateConverter;
+import utils.Pair;
 
 import javax.swing.table.DefaultTableModel;
 import java.rmi.RemoteException;
+import java.sql.Timestamp;
+import java.util.Date;
+import java.util.List;
 
 /**
  * @author Thanh
@@ -28,8 +33,9 @@ public class GroupChat extends javax.swing.JFrame {
     private DefaultTableModel tblUserModel;
     private Thread thread;
     private ChatRoom chatRoom;
+    private MessageController messageController;
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ExitButton;
+    private javax.swing.JButton btnExit;
     private javax.swing.JButton SentButton;
     private javax.swing.JTable tblUser;
     private javax.swing.JLabel jLabel1;
@@ -47,9 +53,13 @@ public class GroupChat extends javax.swing.JFrame {
         this.tblChatModel = (DefaultTableModel) tblChat.getModel();
         this.tblUserModel = (DefaultTableModel) tblUser.getModel();
         this.chatRoom = chatRoom;
+        this.messageController = chatRoom.getMessageController();
         this.rmi = rmi;
+        System.out.println("Call khoi tao");
+        loadOldMessages();
         refreshStatus();
-        jLabel1.setText(chatRoom.getName());
+        this.setTitle(chatRoom.getName());
+        jLabel2.setText("USERNAME: "+ user.getUsername());
         runThread();
     }
 
@@ -81,16 +91,40 @@ public class GroupChat extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GroupChat(user, chatRoom, rmi).setVisible(true);
+                GroupChat groupChat = new GroupChat(user, chatRoom, rmi);
+                groupChat.setVisible(true);
             }
         });
     }
-    private void deleteUserTable(){
+
+    private void loadOldMessages() {
+        try {
+            List<Pair<User, Message>> list = this.rmi.getOldMessages(this.chatRoom.getId());
+            System.out.println(list);
+            list.forEach(entry -> {
+                User key = entry.getKey();
+                Message value = entry.getValue();
+                tblChatModel.addRow(new Object[]{key.getUsername(), value.getContent(), DateConverter.formatDate(value.getCreateAt().getTime())});
+            });
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void deleteUserTable() {
         int rowCount = tblUserModel.getRowCount();
         for (int i = rowCount - 1; i >= 0; i--) {
             tblUserModel.removeRow(i);
         }
     }
+
+    private void deleteChatTable() {
+        int rowCount = tblChatModel.getRowCount();
+        for (int i = rowCount - 1; i >= 0; i--) {
+            tblChatModel.removeRow(i);
+        }
+    }
+
     private void refreshStatus() {
         deleteUserTable();
         try {
@@ -114,23 +148,26 @@ public class GroupChat extends javax.swing.JFrame {
                         Message ms = (Message) messageController.getIn().readObject();
                         System.out.println(ms);
                         String status = ms.getStatus();
+                        System.out.println(status);
                         if (status.equals("Message")) {
                             addMessage(ms);
                         } else if (status.equals("New")) {
                             refreshStatus();
-                            getMessage(ms.getID(), ms.getMessage());
+                            getMessage();
                         } else if (status.equals("Photo")) {
-                            getMessage(ms.getID(), ms.getMessage());
+                            getMessage();
                         } else if (status.equals("File")) {
-                            getMessage(ms.getID(), ms.getMessage());
+                            getMessage();
                         } else if (status.equals("Error")) {
-                            getMessage(ms.getID(), ms.getMessage());
+                            getMessage();
                         } else if (status.equals("Emoji")) {
-                            getMessage(ms.getID(), ms.getMessage());
+                            getMessage();
                         } else if (status.equals("GetFile")) {
-                            getMessage(ms.getID(), ms.getMessage());
+                            getMessage();
                         } else if (status.equals("Sound")) {
-                            getMessage(ms.getID(), ms.getMessage());
+                            getMessage();
+                        } else if (status.equals("Quit")) {
+                            refreshStatus();
                         }
                     }
                 } catch (Exception e) {
@@ -148,11 +185,13 @@ public class GroupChat extends javax.swing.JFrame {
         thread.start();
     }
 
-    private void getMessage(int ID, String ms) {
+    private void getMessage() {
     }
 
     private void addMessage(Message ms) {
-        tblChatModel.addRow(new Object[]{ms.getUser().getUsername(), ms.getMessage(), ms.getCreateAt()});
+        String t = DateConverter.formatDate(ms.getCreateAt().getTime());
+        tblChatModel.addRow(new Object[]{ms.getUser().getUsername(), ms.getContent(), t});
+        this.messageController.saveMessage(ms);
     }
 
     /**
@@ -169,7 +208,7 @@ public class GroupChat extends javax.swing.JFrame {
         tblChat = new javax.swing.JTable();
         jTextField1 = new javax.swing.JTextField();
         SentButton = new javax.swing.JButton();
-        ExitButton = new javax.swing.JButton();
+        btnExit = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblUser = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
@@ -199,10 +238,10 @@ public class GroupChat extends javax.swing.JFrame {
             }
         });
 
-        ExitButton.setText("Exit Group Chat");
-        ExitButton.addActionListener(new java.awt.event.ActionListener() {
+        btnExit.setText("Quay Lại");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ExitButtonActionPerformed(evt);
+                btnExitActionPerformed(evt);
             }
         });
 
@@ -250,7 +289,7 @@ public class GroupChat extends javax.swing.JFrame {
                                                                                                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                                                         .addGroup(layout.createSequentialGroup()
                                                                                                 .addGap(87, 87, 87)
-                                                                                                .addComponent(ExitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                                                                .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                                                         .addGroup(layout.createSequentialGroup()
                                                                                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                                 .addGap(54, 54, 54)
@@ -268,7 +307,7 @@ public class GroupChat extends javax.swing.JFrame {
                         .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(layout.createSequentialGroup()
-                                                .addComponent(ExitButton)
+                                                .addComponent(btnExit)
                                                 .addGap(2, 2, 2)
                                                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(layout.createSequentialGroup()
@@ -296,23 +335,27 @@ public class GroupChat extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void ExitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ExitButtonActionPerformed
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+        Message message = new Message();
+        message.setStatus("Quit");
+        this.messageController.sendMessage(message);
+        refreshStatus();
+        this.dispose();
+    }
 
     private void SentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SentButtonActionPerformed
-        // TODO add your handling code here:
         String text = jTextField1.getText();
-        System.out.println(text);
         try {
             Message message = new Message();
+            message.setStatus("Message");
             message.setUser(user);
-            message.setMessage(text);
+            message.setContent(text);
+            message.setRoomId(chatRoom.getId());
+            message.setCreateAt(new Timestamp(new Date().getTime()));
             MessageController messageController = chatRoom.getMessageController();
             messageController.sendMessage(message);
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }//GEN-LAST:event_SentButtonActionPerformed
-    // End of variables declaration//GEN-END:variables
+    }
 }

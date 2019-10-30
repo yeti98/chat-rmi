@@ -8,8 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class UserDAO {
-    private DatabaseConnection databaseConnection = DatabaseConnection.getInstance();
-    private Connection connection = databaseConnection.getConnection();
+    private Connection connection = DatabaseConnection.getInstance().getConnection();
 
     public UserDAO() {
     }

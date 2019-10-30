@@ -4,9 +4,11 @@ package rmi;
 import dao.UserDAO;
 import model.ChatRoom;
 import model.Client;
+import model.Message;
 import model.User;
 import server.Server;
 import server.ServerSingleton;
+import utils.Pair;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
@@ -33,12 +35,18 @@ public class RemoteMethod extends UnicastRemoteObject implements IRMI {
         ChatRoom chatRoom = server.getRoomController().getRoomById(roomId);
         List<Client> clients = chatRoom.getClients();
         for (Client client : clients) {
-            System.out.println(client.getUser().getId() + "\t" + userId);
             if (client.getUser().getId() == userId) {
                 return "Online";
             }
         }
         return "Offline";
+    }
+
+    @Override
+    public List<Pair<User, Message>> getOldMessages(int roomId) {
+        Server server = ServerSingleton.getServer();
+        ChatRoom chatRoom = server.getRoomController().getRoomById(roomId);
+        return chatRoom.getMessages();
     }
 
 

@@ -3,9 +3,10 @@ package model;
 import control.MessageController;
 
 import javax.swing.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class ChatRoom {
+public class ChatRoom implements Serializable {
     private static int fileID;
     private static JTextArea txt;
     private int clientID;

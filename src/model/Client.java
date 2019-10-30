@@ -12,7 +12,7 @@ import java.net.Socket;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Client extends Thread {
+public class Client extends Thread implements Serializable{
 
     private Socket socket;
     private String userName;
@@ -37,10 +37,15 @@ public class Client extends Thread {
         try {
             in = new ObjectInputStream(socket.getInputStream());
             out = new ObjectOutputStream(socket.getOutputStream());
-            Integer roomIdx = (Integer) in.readObject();
-            System.out.println(roomIdx);
+            Integer roomId = (Integer) in.readObject();
+            System.out.println(roomId);
             Server server = ServerSingleton.getServer();
-            chatRoom = server.getRoomController().getRoom(roomIdx);
+            chatRoom = server.getRoomController().getRoom(roomId);
+            if(chatRoom == null){
+                chatRoom = server.getRoomController().createChatRoom("chat room "+roomId);
+                server.getRoomController().getRooms().add(chatRoom);
+                System.out.println("CREATED:"+chatRoom);
+            }
             ID = chatRoom.addClient(this);
             //  loop starting get message from client
             while (true) {

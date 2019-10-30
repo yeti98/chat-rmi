@@ -7,7 +7,6 @@ package view;
 
 import control.MessageController;
 import model.ChatRoom;
-import model.Message;
 import rmi.IRMI;
 import server.Server;
 import server.ServerSingleton;
@@ -205,16 +204,13 @@ public class ChatType extends javax.swing.JFrame {
             MessageController messageController = new MessageController();
             messageController.connect(roomId, username, IP);
             Server server = ServerSingleton.getServer();
-            ChatRoom chatRoom = server.getRoomController().getRoom(roomId);
+            ChatRoom chatRoom = server.getRoomController().getRoomById(roomId);
             chatRoom.setMessageController(messageController);
-            System.out.println(server.getRoomController().getRooms());
             ChatRoomView.main(username, chatRoom);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-
-
 
 
     // End of variables declaration//GEN-END:variables

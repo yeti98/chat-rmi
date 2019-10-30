@@ -1,9 +1,6 @@
 package rmi;
 
 
-import server.Server;
-import server.ServerSingleton;
-
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
@@ -23,5 +20,4 @@ public class RemoteMethod extends UnicastRemoteObject implements IRMI {
 //        }
         return true;
     }
-
 }

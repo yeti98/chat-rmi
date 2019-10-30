@@ -11,7 +11,6 @@ public class RoomController {
 
     public ChatRoom createChatRoom(String name){
         ChatRoom chatRoom = new ChatRoom(rooms.size(), new ArrayList<>(), name);
-        rooms.add(chatRoom);
         return chatRoom;
     }
 
@@ -34,5 +33,12 @@ public class RoomController {
 
     public void setRooms(List<ChatRoom> rooms) {
         this.rooms = rooms;
+    }
+
+    public ChatRoom getRoomById(int id) {
+        for(ChatRoom chatRoom : rooms){
+            if(chatRoom.getId() == id) return chatRoom;
+        }
+        return null;
     }
 }

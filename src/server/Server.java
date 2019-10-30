@@ -3,6 +3,7 @@ package server;
 
 import config.AppProperties;
 import control.RoomController;
+import model.ChatRoom;
 import model.Client;
 import rmi.RemoteMethod;
 
@@ -18,9 +19,12 @@ public class Server extends JFrame {
     private Thread run;
 
     public Server() {
-        roomController.createChatRoom("chat room 0");
-        roomController.createChatRoom("chat room 1");
-        roomController.createChatRoom("chat room 2");
+        ChatRoom chatRoom1 = roomController.createChatRoom("chat room 0");
+        roomController.getRooms().add(chatRoom1);
+        ChatRoom chatRoom2 =roomController.createChatRoom("chat room 1");
+        roomController.getRooms().add(chatRoom2);
+        ChatRoom chatRoom3 =roomController.createChatRoom("chat room 2");
+        roomController.getRooms().add(chatRoom3);
     }
 
     public static void main(String args[]) {

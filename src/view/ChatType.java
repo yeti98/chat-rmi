@@ -202,9 +202,11 @@ public class ChatType extends javax.swing.JFrame {
         try {
             int roomId = Integer.parseInt(jTextField2.getText());
             System.out.println(roomId);
-            MessageController.connect(roomId, username, IP);
+            MessageController messageController = new MessageController();
+            messageController.connect(roomId, username, IP);
             Server server = ServerSingleton.getServer();
             ChatRoom chatRoom = server.getRoomController().getRoom(roomId);
+            chatRoom.setMessageController(messageController);
             System.out.println(server.getRoomController().getRooms());
             ChatRoomView.main(username, chatRoom);
         } catch (Exception e) {

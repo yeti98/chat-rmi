@@ -22,7 +22,7 @@ public class Main extends javax.swing.JFrame {
                 try {
                     while (true) {
                         System.out.println("waiting message ...");
-                        Message ms = (Message) MessageController.getIn().readObject();
+                        Message ms = (Message) new MessageController().getIn().readObject();
                         System.out.println(ms);
                         String status = ms.getStatus();
                         if (status.equals("Message")) {

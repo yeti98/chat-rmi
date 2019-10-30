@@ -1,7 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="af044c47-be00-49af-b52e-e775929b0c61" name="Default Changelist" comment="" />
+    <list default="true" id="af044c47-be00-49af-b52e-e775929b0c61" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/Main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Get_Box_New$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Get_Box_New.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Get_Emoji_New.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Get_Emoji_New.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Get_File$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Get_File$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Get_File.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Get_File_New$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Get_File_New$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Get_File_New.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Get_Photo_Box$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Get_Photo_Box.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Get_Photo_Box_New$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Get_Photo_Box_New.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Get_Sound$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Get_Sound$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Get_Sound.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Get_Sound_New$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Get_Sound_New$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Get_Sound_New.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Send_Box_New$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Send_Box_New.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Send_Emoji_New.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Send_File$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Send_File$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Send_File.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Send_File_New$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Send_File_New$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Send_File_New.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Send_Photo_Box$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Send_Photo_Box.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Send_Photo_Box_New$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Send_Photo_Box_New.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Send_Sound$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Send_Sound$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Send_Sound.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Send_Sound_New$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Send_Sound_New$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/my_swing/Send_Sound_New.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/control/MessageController$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/control/MessageController$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/control/MessageController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/control/RoomController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/model/ChatRoom.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/model/Client$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/model/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/rmi/IRMI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/rmi/RemoteMethod.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/server/Server$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/server/Server.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/server/ServerSingleton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/ChatRoomView$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/ChatRoomView$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/ChatRoomView$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/ChatRoomView$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/ChatRoomView$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/ChatRoomView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/ChatType$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/ChatType$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/ChatType$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/ChatType$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/ChatType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Button.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Emoji.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Emoji_Group.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Friend_Box.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Friend_Box.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Get_Box.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Get_Box.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Get_Box_New.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Get_Box_New.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Get_Emoji.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Get_Emoji.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Get_Emoji_New.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Get_Emoji_New.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Get_File.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Get_File.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Get_File_New.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Get_File_New.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Get_Photo_Box.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Get_Photo_Box.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Get_Photo_Box_New.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Get_Photo_Box_New.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Get_Sound.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Get_Sound.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Get_Sound_New.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Get_Sound_New.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/ImageViewer.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/ImageViewer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Panel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Send_Box.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Send_Box.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Send_Box_New.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Send_Box_New.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Send_Emoji.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Send_Emoji.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Send_Emoji_New.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Send_Emoji_New.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Send_File.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Send_File.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Send_File_New.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Send_File_New.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Send_Photo_Box.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Send_Photo_Box.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Send_Photo_Box_New.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Send_Photo_Box_New.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Send_Sound.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Send_Sound.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Send_Sound_New.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/my_swing/Send_Sound_New.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/control/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/MessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ChatRoomView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ChatRoomView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ChatType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ChatType.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +133,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1SsvgDS0CscdYTYQcsSSO4cCQoz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
@@ -76,12 +199,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="server.Main" />
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="client.Main" />
       <module name="Chat" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="server.*" />
+          <option name="PATTERN" value="client.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -118,17 +241,17 @@
     <list>
       <item itemvalue="Application.Login" />
       <item itemvalue="Application.Server" />
-      <item itemvalue="Application.Main" />
       <item itemvalue="Application.ServerSingleton" />
       <item itemvalue="Application.B" />
+      <item itemvalue="Application.Main (1)" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Login" />
         <item itemvalue="Application.Server" />
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.ServerSingleton" />
         <item itemvalue="Application.B" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -147,11 +270,22 @@
       <workItem from="1572385091497" duration="829000" />
       <workItem from="1572407001345" duration="7665000" />
       <workItem from="1572419960139" duration="5403000" />
-      <workItem from="1572426981430" duration="663000" />
+      <workItem from="1572426981430" duration="1563000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

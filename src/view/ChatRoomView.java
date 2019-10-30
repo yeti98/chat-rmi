@@ -245,7 +245,8 @@ public class ChatRoomView extends javax.swing.JFrame {
             Message message = new Message();
             message.setUsername(username);
             message.setMessage(text);
-            MessageController.sendMessage(message);
+            MessageController messageController = chatRoom.getMessageController();
+            messageController.sendMessage(message);
         } catch (Exception e) {
             e.printStackTrace();
         }

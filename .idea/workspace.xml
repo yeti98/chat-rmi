@@ -2,27 +2,278 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af044c47-be00-49af-b52e-e775929b0c61" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chat/control/RoomController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chat/control/RoomController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chat/model/ChatRoom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chat/model/ChatRoom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chat/model/Client$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chat/model/Client$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chat/model/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chat/model/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chat/server/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chat/server/Server$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chat/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chat/server/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/ChatType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chat/view/ChatType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/control/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/RoomController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/ChatRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ChatRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rmi/IRMI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rmi/IRMI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rmi/RemoteMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rmi/RemoteMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/ChatType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ChatType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Chat.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/Main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green (10).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green (11).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green (12).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green (13).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green (14).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green (15).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green (16).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green (17).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green (18).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green (19).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green (20).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green (21).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green (22).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green (23).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green (24).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green (25).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green (26).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green (27).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green (28).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green (3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green (4).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green (5).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green (6).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green (7).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green (8).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green (9).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_green.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow (10).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow (11).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow (12).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow (13).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow (14).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow (15).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow (16).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow (17).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow (18).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow (19).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow (20).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow (21).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow (22).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow (23).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow (24).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow (25).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow (26).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow (27).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow (28).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow (3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow (4).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow (5).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow (6).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow (7).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow (8).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow (9).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/emoji/emoji_yellow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/function/FileChooser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/function/Recoder$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/function/Recoder$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/function/Recoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/function/Scrolling$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/function/Scrolling$ScrollAnimator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/function/Scrolling.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/icon/border.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/icon/border_small.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/icon/emoji.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/icon/emoji_click.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/icon/exit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/icon/exit_over.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/icon/file.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/icon/file_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/icon/file_click.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/icon/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/icon/microphone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/icon/microphone_click.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/icon/minimize.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/icon/minimize_over.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/icon/more.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/icon/more_click.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/icon/photo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/icon/photo_click.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/icon/profile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/icon/profile_small.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/icon/send.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/icon/send_click.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/client/sound/sound.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/config/AppProperties.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/control/MessageController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/control/RoomController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/model/ChatRoom.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/model/Client$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/model/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/model/Friend.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/model/Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/rmi/IRMI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/rmi/RemoteMethod.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/server/Server$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/server/Server.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/server/ServerSingleton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/ChatRoomView$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/ChatRoomView$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/ChatRoomView$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/ChatRoomView$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/ChatRoomView$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/ChatRoomView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/ChatType$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/ChatType$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/ChatType$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/ChatType$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/ChatType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/Login$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/Login$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/Login$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/Login$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/Login.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/NewJFrame2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/NewJFrame2$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat/view/NewJFrame2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green (10).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green (11).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green (12).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green (13).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green (14).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green (15).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green (16).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green (17).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green (18).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green (19).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green (20).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green (21).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green (22).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green (23).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green (24).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green (25).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green (26).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green (27).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green (28).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green (3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green (4).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green (5).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green (6).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green (7).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green (8).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green (9).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_green.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow (10).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow (11).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow (12).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow (13).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow (14).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow (15).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow (16).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow (17).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow (18).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow (19).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow (20).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow (21).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow (22).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow (23).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow (24).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow (25).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow (26).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow (27).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow (28).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow (3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow (4).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow (5).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow (6).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow (7).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow (8).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow (9).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/emoji/emoji_yellow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/function/FileChooser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/function/Recoder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/function/Scrolling.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/icon/border.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/icon/border_small.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/icon/emoji.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/icon/emoji_click.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/icon/exit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/icon/exit_over.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/icon/file.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/icon/file_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/icon/file_click.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/icon/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/icon/microphone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/icon/microphone_click.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/icon/minimize.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/icon/minimize_over.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/icon/more.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/icon/more_click.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/icon/photo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/icon/photo_click.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/icon/profile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/icon/profile_small.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/icon/send.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/icon/send_click.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/sound/sound.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/AppProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/control/MessageController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/control/RoomController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ChatRoom.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Friend.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Message.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rmi/IRMI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rmi/RemoteMethod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/ServerSingleton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ChatRoomView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ChatType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Login.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Login.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/NewJFrame1.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/NewJFrame2.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/NewJFrame2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/NewJFrame3.form" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="chat: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="V1" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -34,28 +285,39 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1SsvgDS0CscdYTYQcsSSO4cCQoz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/view" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/server" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="server.main" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="message" />
       <recent name="rmi" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="server.main" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/view" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/server" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -70,13 +332,39 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Server">
-    <configuration name="B" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="server.B" />
+  <component name="RunManager" selected="Application.Login">
+    <configuration name="FindUser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javaapplication1.FindUser" />
       <module name="Chat" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="server.*" />
+          <option name="PATTERN" value="javaapplication1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GroupChat (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.GroupChat" />
+      <module name="Chat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GroupChat" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javaapplication1.GroupChat" />
+      <module name="Chat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="javaapplication1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,34 +385,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="client.Main" />
-      <module name="Chat" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="server.Server" />
-      <module name="Chat" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServerSingleton" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="server.ServerSingleton" />
       <module name="Chat" />
       <extension name="coverage">
         <pattern>
@@ -139,19 +401,34 @@
     <list>
       <item itemvalue="Application.Login" />
       <item itemvalue="Application.Server" />
-      <item itemvalue="Application.ServerSingleton" />
-      <item itemvalue="Application.B" />
-      <item itemvalue="Application.Main (1)" />
+      <item itemvalue="Application.FindUser" />
+      <item itemvalue="Application.GroupChat" />
+      <item itemvalue="Application.GroupChat (1)" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Login" />
         <item itemvalue="Application.Server" />
-        <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.ServerSingleton" />
-        <item itemvalue="Application.B" />
+        <item itemvalue="Application.GroupChat (1)" />
+        <item itemvalue="Application.GroupChat" />
+        <item itemvalue="Application.FindUser" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@6c978e0d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -168,7 +445,8 @@
       <workItem from="1572385091497" duration="829000" />
       <workItem from="1572407001345" duration="7665000" />
       <workItem from="1572419960139" duration="5403000" />
-      <workItem from="1572426981430" duration="4030000" />
+      <workItem from="1572426981430" duration="5406000" />
+      <workItem from="1572433524344" duration="16265000" />
     </task>
     <servers />
   </component>
@@ -180,7 +458,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

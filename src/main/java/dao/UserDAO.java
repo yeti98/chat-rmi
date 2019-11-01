@@ -7,10 +7,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class UserDAO {
-    private Connection connection = DatabaseConnection.getInstance().getConnection();
+public class UserDAO extends DBConnector{
+    private final Connection connection = DBConnector.getInstance().getConnection();
 
-    public UserDAO() {
+    public UserDAO() throws SQLException {
+        super();
     }
 
     public User login(String username, String pass) throws SQLException {

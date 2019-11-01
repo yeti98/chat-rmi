@@ -2,27 +2,121 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af044c47-be00-49af-b52e-e775929b0c61" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/MessageDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/DateConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/Pair.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/FindUser.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/FindUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/view/MessagesFrm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/ClientHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Chat.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/client/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green (10).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green (11).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green (12).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green (13).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green (14).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green (15).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green (16).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green (17).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green (18).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green (19).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green (20).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green (21).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green (22).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green (23).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green (24).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green (25).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green (26).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green (27).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green (28).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green (3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green (4).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green (5).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green (6).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green (7).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green (8).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green (9).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_green.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow (10).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow (11).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow (12).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow (13).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow (14).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow (15).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow (16).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow (17).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow (18).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow (19).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow (20).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow (21).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow (22).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow (23).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow (24).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow (25).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow (26).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow (27).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow (28).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow (3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow (4).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow (5).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow (6).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow (7).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow (8).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow (9).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/emoji/emoji_yellow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/function/FileChooser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/function/Recoder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/function/Scrolling.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/icon/border.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/icon/border_small.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/icon/emoji.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/icon/emoji_click.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/icon/exit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/icon/exit_over.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/icon/file.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/icon/file_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/icon/file_click.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/icon/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/icon/microphone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/icon/microphone_click.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/icon/minimize.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/icon/minimize_over.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/icon/more.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/icon/more_click.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/icon/photo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/icon/photo_click.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/icon/profile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/icon/profile_small.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/icon/send.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/icon/send_click.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/sound/sound.wav" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/control/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/control/MessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/control/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/control/RoomController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/ChatRoomDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/ChatRoomDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/DBConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/MessageDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/MessageDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/ChatRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/ChatRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Friend.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Room.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rmi/IRMI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rmi/IRMI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rmi/RemoteMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rmi/RemoteMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/GroupChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/GroupChat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/NewJFrame2.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/SelectUser.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/NewJFrame2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/SelectUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/NewJFrame3.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/GroupChat.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/ServerSingleton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/ChatType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/view/SearchFrm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/FindUser.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/FindUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/GroupChat.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/GroupChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/view/ChatRoomFrm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/Login.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/view/LoginFrm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/NewJFrame1.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/SelectUser.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/SelectUser.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,11 +161,18 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="UML Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -84,17 +185,23 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultPlantUmlFileTemplate" value="UML Class" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/client" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/view" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="server.main" />
     </key>
@@ -120,13 +227,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Login">
-    <configuration name="Login" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="view.Login" />
+  <component name="RunManager" selected="Application.LoginFrm">
+    <configuration name="FindUser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javaapplication1.FindUser" />
       <module name="Chat" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="view.*" />
+          <option name="PATTERN" value="javaapplication1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -134,12 +241,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NewJFrame2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="view.NewJFrame2" />
+    <configuration name="GroupChat1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.GroupChat1" />
       <module name="Chat" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="view.*" />
+          <option name="PATTERN" value="client.view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginFrm" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="client.view.LoginFrm" />
+      <module name="Chat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client.view.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -173,33 +293,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="view.Tet" />
-      <module name="Chat" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="view.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.NewJFrame2" />
-      <item itemvalue="Application.SelectUser" />
       <item itemvalue="Application.Server" />
-      <item itemvalue="Application.Login" />
-      <item itemvalue="Application.Tet" />
+      <item itemvalue="Application.LoginFrm" />
+      <item itemvalue="Application.GroupChat1" />
+      <item itemvalue="Application.FindUser" />
+      <item itemvalue="Application.SelectUser" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Login" />
+        <item itemvalue="Application.LoginFrm" />
         <item itemvalue="Application.Server" />
-        <item itemvalue="Application.Tet" />
         <item itemvalue="Application.SelectUser" />
-        <item itemvalue="Application.NewJFrame2" />
+        <item itemvalue="Application.FindUser" />
+        <item itemvalue="Application.GroupChat1" />
       </list>
     </recent_temporary>
   </component>
@@ -210,17 +317,17 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@6c978e0d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@3fe48acd" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@6c978e0d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@3420c0b0" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@3fe48acd" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@7e41859b" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@6c978e0d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@778af17d" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@3fe48acd" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@7d6c6062" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -244,7 +351,12 @@
       <workItem from="1572407001345" duration="7665000" />
       <workItem from="1572419960139" duration="5403000" />
       <workItem from="1572426981430" duration="5406000" />
-      <workItem from="1572433524344" duration="30353000" />
+      <workItem from="1572433524344" duration="30563000" />
+      <workItem from="1572501208865" duration="12346000" />
+      <workItem from="1572515287732" duration="3094000" />
+      <workItem from="1572518814080" duration="2656000" />
+      <workItem from="1572526997872" duration="13055000" />
+      <workItem from="1572633638735" duration="280000" />
     </task>
     <servers />
   </component>

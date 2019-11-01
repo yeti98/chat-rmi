@@ -30,15 +30,12 @@ public class Pair<K, V> implements Serializable {
         return key;
     }
 
-    public void setKey(K key) {
-        this.key = key;
-    }
-
     public V getValue() {
         return value;
     }
 
-    public void setValue(V value) {
-        this.value = value;
+    @Override
+    public String toString() {
+        return key.toString();
     }
 }

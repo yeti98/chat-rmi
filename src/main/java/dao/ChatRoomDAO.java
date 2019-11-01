@@ -10,12 +10,13 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ChatRoomDAO {
-    private Connection connection = DatabaseConnection.getInstance().getConnection();
-    private UserDAO userDAO = new UserDAO();
-    private MessageDAO messageDAO = new MessageDAO();
+public class ChatRoomDAO extends DBConnector {
+    private final Connection connection = DBConnector.getInstance().getConnection();
+    private final UserDAO userDAO = new UserDAO();
+    private final MessageDAO messageDAO = new MessageDAO();
 
-    public ChatRoomDAO() {
+    public ChatRoomDAO() throws SQLException {
+        super();
     }
 
     public List<ChatRoom> getAllChatRooms() {

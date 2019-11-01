@@ -3,7 +3,7 @@ package model;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
-public class Message implements Serializable, Comparable<Message> {
+public class Message implements Serializable {
 
     private int id;
     private String status;
@@ -11,10 +11,6 @@ public class Message implements Serializable, Comparable<Message> {
     private Timestamp createAt;
     private String content;
     private int roomId;
-
-    public int getId() {
-        return id;
-    }
 
     public void setId(int id) {
         this.id = id;
@@ -63,7 +59,14 @@ public class Message implements Serializable, Comparable<Message> {
 
 
     @Override
-    public int compareTo(Message message) {
-        return (int) (this.getCreateAt().getTime() - message.getCreateAt().getTime());
+    public String toString() {
+        return "Message{" +
+                "id=" + id +
+                ", status='" + status + '\'' +
+                ", user=" + user +
+                ", createAt=" + createAt +
+                ", content='" + content + '\'' +
+                ", roomId=" + roomId +
+                '}';
     }
 }

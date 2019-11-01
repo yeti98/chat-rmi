@@ -9,9 +9,12 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MessageDAO {
-    private Connection connection = DatabaseConnection.getInstance().getConnection();
-    private UserDAO userDAO = new UserDAO();
+public class MessageDAO extends DBConnector {
+    private final Connection connection = DBConnector.getInstance().getConnection();
+    private final UserDAO userDAO = new UserDAO();
+
+    public MessageDAO() throws SQLException {
+    }
 
     public boolean saveMessage(Message message) {
         String query = " insert into message (userid, roomid, content, createAt)" + " values (?, ?, ?, ?)";

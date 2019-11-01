@@ -1,18 +1,15 @@
 package model;
 
 import control.MessageController;
+import dto.ChatRoomDTO;
 import utils.Pair;
 
-import javax.swing.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ChatRoom implements Serializable {
-    private static int fileID;
-    private static JTextArea txt;
-    private int clientID;
-    private ArrayList<Client> clients;
+    private ArrayList<ClientHandler> clients;
     private String name;
     private int Id;
     private MessageController messageController;
@@ -22,43 +19,22 @@ public class ChatRoom implements Serializable {
     public ChatRoom() {
     }
 
-    public ChatRoom(int Id, ArrayList<Client> clients, String name) {
-        this.Id = Id;
-        this.clients = clients;
-        this.clientID = 0;
-        this.name = name;
+    public ChatRoom(ChatRoomDTO chatRoomDTO, MessageController messageController) {
+        this.Id = chatRoomDTO.getId();
+        this.name = chatRoomDTO.getName();
+        this.messages = chatRoomDTO.getMessages();
+        this.members = chatRoomDTO.getMembers();
+        this.clients = new ArrayList<>();
+        this.messageController = messageController;
     }
 
-    public static int getFileID() {
-        return fileID;
-    }
-
-    public static void setFileID(int aFileID) {
-        fileID = aFileID;
-    }
-
-    public static JTextArea getTxt() {
-        return txt;
-    }
-
-    public static void setTxt(JTextArea aTxt) {
-        txt = aTxt;
-    }
 
     public List<User> getMembers() {
         return members;
     }
 
-    public void setMembers(List<User> members) {
-        this.members = members;
-    }
-
     public MessageController getMessageController() {
         return messageController;
-    }
-
-    public void setMessageController(MessageController messageController) {
-        this.messageController = messageController;
     }
 
     public int getId() {
@@ -69,19 +45,12 @@ public class ChatRoom implements Serializable {
         Id = id;
     }
 
-    public int getClientID() {
-        return clientID;
-    }
 
-    public void setClientID(int clientID) {
-        this.clientID = clientID;
-    }
-
-    public ArrayList<Client> getClients() {
+    public ArrayList<ClientHandler> getClients() {
         return clients;
     }
 
-    public void setClients(ArrayList<Client> clients) {
+    public void setClients(ArrayList<ClientHandler> clients) {
         this.clients = clients;
     }
 
@@ -93,9 +62,9 @@ public class ChatRoom implements Serializable {
         this.name = name;
     }
 
-    public int addClient(Client client) {
+    public int addClient(ClientHandler client) {
         this.clients.add(client);
-        return clientID++;
+        return this.clients.size();
     }
 
     public List<Pair<User, Message>> getMessages() {
@@ -106,13 +75,14 @@ public class ChatRoom implements Serializable {
         this.messages = messages;
     }
 
+
     @Override
     public String toString() {
         return "ChatRoom{" +
-                "clientID=" + clientID +
-                ", clients=" + clients +
+                "clients=" + clients +
                 ", name='" + name + '\'' +
                 ", Id=" + Id +
+                ", members=" + members +
                 '}';
     }
 }

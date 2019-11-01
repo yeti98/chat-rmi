@@ -1,5 +1,6 @@
 package rmi;
 
+import dto.ChatRoomDTO;
 import model.Message;
 import model.User;
 import utils.Pair;
@@ -15,4 +16,10 @@ public interface IRMI extends Remote {
     String checkUserStatus(Integer roomId, int userId) throws RemoteException;
 
     List<Pair<User, Message>> getOldMessages(int id) throws RemoteException;
+
+    List<Pair<ChatRoomDTO, Integer>> getChatRoomStatusByUser(User user) throws RemoteException;
+
+    ChatRoomDTO getChatRoomDTO(int roomId) throws RemoteException;
+
+    List<ChatRoomDTO> getAllChatRoom() throws RemoteException;
 }

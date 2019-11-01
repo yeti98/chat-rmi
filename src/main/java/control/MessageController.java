@@ -1,69 +1,28 @@
 package control;
 
+import config.AppProperties;
 import dao.MessageDAO;
-import model.Friend;
 import model.Message;
 import model.User;
 
-import javax.swing.*;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.sql.SQLException;
 import java.sql.Timestamp;
-import java.util.HashMap;
 
 public class MessageController {
-    private static final String[] fileSizeUnits = {"bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"};
-    private HashMap<Integer, Friend> friends = new HashMap<>();
+    private final MessageDAO messageDAO = new MessageDAO();
     private Socket client;
     private ObjectOutputStream out;
     private ObjectInputStream in;
-    private MessageDAO messageDAO = new MessageDAO();
 
-    public static String[] getFileSizeUnits() {
-        return fileSizeUnits;
-    }
-
-    public static void sendPhoto(ImageIcon photo) throws Exception {
-//        Message ms = new Message();
-//        ms.setStatus("Photo");
-//        ms.setID(MessageController.getMyID());
-//        ms.setImage(photo);
-//        out.writeObject(ms);
-//        out.flush();
-    }
-
-    public HashMap<Integer, Friend> getFriends() {
-        return friends;
-    }
-
-    public void setFriends(HashMap<Integer, Friend> friends) {
-        this.friends = friends;
-    }
-
-    public Socket getClient() {
-        return client;
-    }
-
-    public void setClient(Socket client) {
-        this.client = client;
-    }
-
-    public ObjectOutputStream getOut() {
-        return out;
-    }
-
-    public void setOut(ObjectOutputStream out) {
-        this.out = out;
+    public MessageController() throws SQLException {
     }
 
     public ObjectInputStream getIn() {
         return in;
-    }
-
-    public void setIn(ObjectInputStream in) {
-        this.in = in;
     }
 
 
@@ -78,10 +37,10 @@ public class MessageController {
     }
 
     public void connect(int i, User user, String IP) throws Exception {
-        client = new Socket(IP, 5000);
-        this.out = new ObjectOutputStream(client.getOutputStream());
-        this.in = new ObjectInputStream(client.getInputStream());
-        out.writeObject(new Integer(i));
+        client = new Socket(IP, AppProperties.PORT);
+        out = new ObjectOutputStream(client.getOutputStream());
+        in = new ObjectInputStream(client.getInputStream());
+        out.writeObject(i);
         Message message = new Message();
         message.setStatus("New");
         message.setUser(user);
@@ -94,5 +53,4 @@ public class MessageController {
     public boolean saveMessage(Message ms) {
         return messageDAO.saveMessage(ms);
     }
-
 }

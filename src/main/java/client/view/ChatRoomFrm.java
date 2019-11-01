@@ -168,7 +168,11 @@ class ChatRoomFrm extends javax.swing.JFrame {
     private void addMessage(Message ms) {
         String t = DateConverter.formatDate(ms.getCreateAt().getTime());
         tblChatModel.addRow(new Object[]{ms.getUser().getUsername(), ms.getContent(), t});
-        this.messageController.saveMessage(ms);
+        try {
+            rmi.saveMessage(ms);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
     }
 
     /**

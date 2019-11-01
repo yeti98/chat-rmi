@@ -22,4 +22,6 @@ public interface IRMI extends Remote {
     ChatRoomDTO getChatRoomDTO(int roomId) throws RemoteException;
 
     List<ChatRoomDTO> getAllChatRoom() throws RemoteException;
+
+    void saveMessage(Message ms) throws RemoteException;
 }

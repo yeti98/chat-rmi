@@ -90,5 +90,10 @@ public class RemoteMethod extends UnicastRemoteObject implements IRMI {
         return rooms.stream().map(EntityToDTO::chatRoom2ChatRoomDTO).collect(Collectors.toList());
     }
 
+    @Override
+    public void saveMessage(Message ms) throws RemoteException {
+        Server.getMessageDAO().saveMessage(ms);
+    }
+
 
 }

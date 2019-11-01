@@ -3,31 +3,36 @@ package server;
 
 import config.AppProperties;
 import control.RoomController;
+import dao.MessageDAO;
 import model.ClientHandler;
-import model.Message;
-import model.User;
 import rmi.RemoteMethod;
-import utils.Pair;
 
 import javax.swing.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-import java.util.List;
+import java.sql.SQLException;
 
 public class Server extends JFrame {
     private static final RoomController roomController = new RoomController();
+    private static MessageDAO messageDAO = null;
     private ServerSocket server;
     private Thread run;
 
-    private Server() {
+    private Server() throws SQLException {
+        messageDAO = new MessageDAO();
         roomController.loadChatRooms();
     }
 
+    public static MessageDAO getMessageDAO() {
+        return messageDAO;
+    }
+
     public static void main(String args[]) {
-        Server server = new Server();
+        System.setProperty("java.rmi.server.hostname", AppProperties.HOST);
         try {
+            Server server = new Server();
             server.startServer();
         } catch (Exception e) {
             e.printStackTrace();

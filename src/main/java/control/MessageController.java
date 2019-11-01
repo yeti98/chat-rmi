@@ -1,7 +1,6 @@
 package control;
 
 import config.AppProperties;
-import dao.MessageDAO;
 import model.Message;
 import model.User;
 
@@ -13,7 +12,6 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 
 public class MessageController {
-    private final MessageDAO messageDAO = new MessageDAO();
     private Socket client;
     private ObjectOutputStream out;
     private ObjectInputStream in;
@@ -50,7 +48,4 @@ public class MessageController {
         out.flush();
     }
 
-    public boolean saveMessage(Message ms) {
-        return messageDAO.saveMessage(ms);
-    }
 }

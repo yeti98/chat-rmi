@@ -127,7 +127,9 @@ class LoginFrm extends javax.swing.JFrame {
         Registry re = null;
         try {
             re = LocateRegistry.getRegistry(IP, AppProperties.REGISTRY_PORT);
+            System.out.println(re);
             IRMI rmi = (IRMI) re.lookup(AppProperties.REGISTRY_NAME);
+            System.out.println(rmi);
             String username = jTextField1.getText().trim();
             String password = jTextField2.getText().trim();
             User user = rmi.verifyUser(username, password);

@@ -41,6 +41,7 @@ public class UserDAO extends DBConnector {
                 User user = new User();
                 user.setId(rs.getInt(1));
                 user.setUsername(rs.getString(2));
+                user.setAvatar(rs.getString(4));
                 return user;
             }
         } catch (SQLException e) {
@@ -60,6 +61,7 @@ public class UserDAO extends DBConnector {
                 User user = new User();
                 user.setId(rs.getInt(1));
                 user.setUsername(rs.getString(2));
+                user.setAvatar(rs.getString(4));
                 users.add(user);
             }
         } catch (SQLException e) {

@@ -6,6 +6,7 @@ import java.util.Objects;
 public class User implements Serializable {
     private int id;
     private String username;
+    private String avatar;
 
     public User() {
 
@@ -47,5 +48,13 @@ public class User implements Serializable {
     @Override
     public int hashCode() {
         return Objects.hash(id, username);
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
     }
 }

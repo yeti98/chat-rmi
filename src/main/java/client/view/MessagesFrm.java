@@ -14,6 +14,7 @@ import rmi.IRMI;
 import utils.Pair;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
@@ -48,6 +49,16 @@ class MessagesFrm extends JFrame {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        tblChat.setDefaultRenderer(Object.class, new DefaultTableCellRenderer()
+        {
+            @Override
+            public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column)
+            {
+                final Component c = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+                c.setBackground(row % 2 == 0 ? Color.LIGHT_GRAY : Color.WHITE);
+                return c;
+            }
+        });
     }
 
     public static void main(User user, String IP, IRMI rmi) {

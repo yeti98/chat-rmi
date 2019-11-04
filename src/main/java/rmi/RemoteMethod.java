@@ -1,6 +1,7 @@
 package rmi;
 
 
+import com.mysql.cj.admin.ServerController;
 import control.RoomController;
 import dto.ChatRoomDTO;
 import model.ChatRoom;
@@ -106,8 +107,10 @@ public class RemoteMethod extends UnicastRemoteObject implements IRMI {
 
     @Override
     public void addUserToChatRoom(User user, ChatRoomDTO chatRoomDTO) throws RemoteException {
-        ChatRoom chatRoom = Server.getRoomController().getRoomById(chatRoomDTO.getId());
+        RoomController roomController = getRoomController();
+        ChatRoom chatRoom = roomController.getRoomById(chatRoomDTO.getId());
         chatRoom.getMembers().add(user);
+        roomController.saveNewChatRoom(chatRoom, user);
     }
 
 

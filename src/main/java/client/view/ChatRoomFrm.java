@@ -13,6 +13,8 @@ import utils.DateConverter;
 import utils.Pair;
 
 import javax.swing.*;
+import javax.swing.event.TableModelEvent;
+import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 import java.rmi.RemoteException;
 import java.sql.Timestamp;
@@ -168,6 +170,7 @@ class ChatRoomFrm extends javax.swing.JFrame {
     private void addMessage(Message ms) {
         String t = DateConverter.formatDate(ms.getCreateAt().getTime());
         tblChatModel.addRow(new Object[]{ms.getUser().getUsername(), ms.getContent(), t});
+        tblChat.scrollRectToVisible(tblChat.getCellRect(tblChat.getRowCount() - 1, 0, true));
         try {
             rmi.saveMessage(ms);
         } catch (RemoteException e) {
@@ -235,7 +238,20 @@ class ChatRoomFrm extends javax.swing.JFrame {
         if (tblUser.getColumnModel().getColumnCount() > 0) {
             tblUser.getColumnModel().getColumn(0).setResizable(true);
         }
-
+        tblChat.getModel().addTableModelListener(new TableModelListener() {
+            @Override
+            public void tableChanged(TableModelEvent tableModelEvent) {
+                int firstRow = tableModelEvent.getFirstRow();
+                int lastRow = tableModelEvent.getLastRow();
+                int index = tableModelEvent.getColumn();
+                switch (tableModelEvent.getType()) {
+                    case TableModelEvent.INSERT:
+                        break;
+                    case TableModelEvent.UPDATE:
+                        break;
+                }
+            }
+        });
         jLabel2.setText("Group 311C9");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

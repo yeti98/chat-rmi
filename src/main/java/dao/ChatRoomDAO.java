@@ -60,7 +60,7 @@ public class ChatRoomDAO extends DBConnector {
             preparedStatement.setInt(1, chatRoom.getId());
             preparedStatement.setString(2, chatRoom.getName());
             preparedStatement.setInt(3, userId);
-            preparedStatement.executeQuery();
+            preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }

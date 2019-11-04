@@ -6,8 +6,10 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
-public class UserDAO extends DBConnector{
+public class UserDAO extends DBConnector {
     private final Connection connection = DBConnector.getInstance().getConnection();
 
     public UserDAO() throws SQLException {
@@ -45,5 +47,24 @@ public class UserDAO extends DBConnector{
             e.printStackTrace();
         }
         return null;
+    }
+
+    public List<User> searchUserByUsername(String key) {
+        List<User> users = new ArrayList<>();
+        String sql = "SELECT * from chatuser WHERE username LIKE '%" + key + "%'";
+        Statement statement = null;
+        try {
+            statement = this.connection.createStatement();
+            ResultSet rs = statement.executeQuery(sql);
+            while (rs.next()) {
+                User user = new User();
+                user.setId(rs.getInt(1));
+                user.setUsername(rs.getString(2));
+                users.add(user);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return users;
     }
 }

@@ -1,6 +1,7 @@
 package rmi;
 
 import dto.ChatRoomDTO;
+import model.ChatRoom;
 import model.Message;
 import model.User;
 import utils.Pair;
@@ -26,4 +27,8 @@ public interface IRMI extends Remote {
     void saveMessage(Message ms) throws RemoteException;
 
     ChatRoomDTO createChatRoom(String name, User user) throws RemoteException;
+
+    List<User> searchUserByUsername(String key) throws RemoteException;
+
+    void addUserToChatRoom(User user, ChatRoomDTO chatRoomDTO) throws RemoteException;
 }

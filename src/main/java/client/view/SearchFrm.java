@@ -15,7 +15,6 @@ import utils.Pair;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.rmi.RemoteException;
-import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -31,6 +30,7 @@ class SearchFrm extends javax.swing.JFrame {
     private final IRMI rmi;
     private JComboBox<Pair<String, ChatRoomDTO>> jComboBox1 = new JComboBox<>();
     private JTextField txtTaoNhom;
+    private JTextField txtUsername = new javax.swing.JTextField();
 
     SearchFrm(User user, String IP, IRMI rmi) {
         this.user = user;
@@ -82,17 +82,17 @@ class SearchFrm extends javax.swing.JFrame {
     private void initComponents() {
 
         javax.swing.JPanel jPanel1 = new javax.swing.JPanel();
-        javax.swing.JTextField jTextField1 = new javax.swing.JTextField();
+        txtUsername = new javax.swing.JTextField();
         txtTaoNhom = new javax.swing.JTextField();
         javax.swing.JLabel jLabel1 = new javax.swing.JLabel();
         javax.swing.JLabel jLabel2 = new javax.swing.JLabel();
         // Variables declaration - do not modify//GEN-BEGIN:variables
-        javax.swing.JButton jButton1 = new javax.swing.JButton();
+        javax.swing.JButton btnTimUser = new javax.swing.JButton();
         javax.swing.JButton jButton2 = new javax.swing.JButton();
         jComboBox1 = new javax.swing.JComboBox<>();
         javax.swing.JSeparator jSeparator1 = new javax.swing.JSeparator();
         javax.swing.JLabel jLabel3 = new javax.swing.JLabel();
-        javax.swing.JButton btnTim = new javax.swing.JButton();
+        javax.swing.JButton btnEntry = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tìm cuộc trò chuyện ");
@@ -105,8 +105,8 @@ class SearchFrm extends javax.swing.JFrame {
 
         jLabel3.setText("Tên nhóm");
 
-        jButton1.setText("Tìm");
-        jButton1.addActionListener(this::jButton1ActionPerformed);
+        btnTimUser.setText("Tìm");
+        btnTimUser.addActionListener(this::jButton1ActionPerformed);
 
         jButton2.setText("Vào");
         jButton2.addActionListener(this::jButton2ActionPerformed);
@@ -114,8 +114,8 @@ class SearchFrm extends javax.swing.JFrame {
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>());
 
 
-        btnTim.setText("Tạo nhóm");
-        btnTim.addActionListener(this::btnTimClickedActionPerformed);
+        btnEntry.setText("Tạo nhóm");
+        btnEntry.addActionListener(this::btnTimClickedActionPerformed);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -129,9 +129,9 @@ class SearchFrm extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(jButton1))
+                                                .addComponent(btnTimUser))
                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addGap(23, 23, 23)
                                                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -147,7 +147,7 @@ class SearchFrm extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(txtTaoNhom, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnTim)
+                                .addComponent(btnEntry)
                                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -156,8 +156,8 @@ class SearchFrm extends javax.swing.JFrame {
                                 .addContainerGap(63, Short.MAX_VALUE)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel1)
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jButton1))
+                                        .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btnTimUser))
                                 .addGap(33, 33, 33)
                                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(51, 51, 51)
@@ -170,7 +170,7 @@ class SearchFrm extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel3)
                                         .addComponent(txtTaoNhom, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(btnTim)))
+                                        .addComponent(btnEntry)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -218,6 +218,10 @@ class SearchFrm extends javax.swing.JFrame {
                 messageController.connect(roomId, user, IP);
                 ChatRoomDTO chatRoomDTO = rmi.getChatRoomDTO(roomId);
                 ChatRoom chatRoom = new ChatRoom(chatRoomDTO, messageController);
+                if(!chatRoom.getMembers().contains(user)){
+                    chatRoom.getMembers().add(user);
+                    rmi.addUserToChatRoom(user, chatRoomDTO);
+                }
                 System.out.println("Client Side:\n" + chatRoom);
                 ChatRoomFrm.main(user, chatRoom, rmi);
             }
@@ -230,8 +234,13 @@ class SearchFrm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTaoNhomActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt){//GEN-FIRST:event_jButton1ActionPerformed
+        try {
+            List<User> users = this.rmi.searchUserByUsername(txtUsername.getText().trim());
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+
     }//GEN-LAST:event_jButton1ActionPerformed
     // End of variables declaration//GEN-END:variables
 }

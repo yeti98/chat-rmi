@@ -3,12 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="af044c47-be00-49af-b52e-e775929b0c61" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/client/view/MessagesFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/view/MessagesFrm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/client/view/SearchFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/view/SearchFrm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/control/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/control/RoomController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/ChatRoomDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/ChatRoomDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rmi/IRMI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rmi/IRMI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rmi/RemoteMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rmi/RemoteMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/Server.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,20 +90,21 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="server.main" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="message" />
-      <recent name="rmi" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/view" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/server" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="client.view" />
+      <recent name="message" />
+      <recent name="rmi" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -207,17 +207,7 @@
       <serviceView>
         <option name="contentProportion" value="0.089516126" />
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@19b5bad9" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@19b5bad9" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@405342a0" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>

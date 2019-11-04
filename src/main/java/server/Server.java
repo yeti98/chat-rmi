@@ -4,6 +4,7 @@ package server;
 import config.AppProperties;
 import control.RoomController;
 import dao.MessageDAO;
+import dao.UserDAO;
 import model.ClientHandler;
 import rmi.RemoteMethod;
 
@@ -17,11 +18,13 @@ import java.sql.SQLException;
 public class Server extends JFrame {
     private static final RoomController roomController = new RoomController();
     private static MessageDAO messageDAO = null;
+    private static UserDAO userDAO;
     private ServerSocket server;
     private Thread run;
 
     private Server() throws SQLException {
         messageDAO = new MessageDAO();
+        userDAO = new UserDAO();
         roomController.loadChatRooms();
     }
 
@@ -44,6 +47,9 @@ public class Server extends JFrame {
         return roomController;
     }
 
+    public static UserDAO getUserDAO() {
+        return userDAO;
+    }
 
     private void startServer() throws Exception {
         server = new ServerSocket(AppProperties.PORT);

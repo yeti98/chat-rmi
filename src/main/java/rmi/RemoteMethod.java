@@ -2,7 +2,6 @@ package rmi;
 
 
 import control.RoomController;
-import dao.UserDAO;
 import dto.ChatRoomDTO;
 import model.ChatRoom;
 import model.ClientHandler;
@@ -30,7 +29,7 @@ public class RemoteMethod extends UnicastRemoteObject implements IRMI {
 
     public User verifyUser(String userName, String pass) throws RemoteException {
         try {
-            return new UserDAO().login(userName, pass);
+            return Server.getUserDAO().login(userName, pass);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -98,6 +97,17 @@ public class RemoteMethod extends UnicastRemoteObject implements IRMI {
     @Override
     public ChatRoomDTO createChatRoom(String name, User user) throws RemoteException {
         return Server.getRoomController().createNewChatRoom(name, user);
+    }
+
+    @Override
+    public List<User> searchUserByUsername(String key) throws RemoteException {
+        return Server.getUserDAO().searchUserByUsername(key);
+    }
+
+    @Override
+    public void addUserToChatRoom(User user, ChatRoomDTO chatRoomDTO) throws RemoteException {
+        ChatRoom chatRoom = Server.getRoomController().getRoomById(chatRoomDTO.getId());
+        chatRoom.getMembers().add(user);
     }
 
 

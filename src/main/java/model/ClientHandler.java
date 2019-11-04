@@ -85,7 +85,7 @@ public class ClientHandler extends Thread implements Serializable {
                 System.out.println("Client Name : " + user.getUsername() + " lost connection...");
                 for (ClientHandler s : chatRoom.getClients()) {
                     Message ms = new Message();
-                    ms.setStatus("Error");
+                    ms.setStatus("Quit");
                     ms.setUser(user);
                     s.getOut().writeObject(ms);
                     s.getOut().flush();

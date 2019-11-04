@@ -30,7 +30,7 @@ class SearchFrm extends javax.swing.JFrame {
     private final IRMI rmi;
     private JComboBox<Pair<String, ChatRoomDTO>> jComboBox1 = new JComboBox<>();
 
-    private SearchFrm(User user, String IP, IRMI rmi) {
+    SearchFrm(User user, String IP, IRMI rmi) {
         this.user = user;
         this.IP = IP;
         this.rmi = rmi;

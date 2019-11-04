@@ -5,7 +5,9 @@
  */
 package client.view;
 
+import control.MessageController;
 import dto.ChatRoomDTO;
+import model.ChatRoom;
 import model.Message;
 import model.User;
 import rmi.IRMI;
@@ -13,6 +15,9 @@ import utils.Pair;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.List;
 
 /**
@@ -20,6 +25,7 @@ import java.util.List;
  */
 class MessagesFrm extends JFrame {
 
+    private static List<Pair<ChatRoomDTO, Integer>> status;
     /**
      * Creates new form NewJFrame2
      */
@@ -37,7 +43,7 @@ class MessagesFrm extends JFrame {
         this.setTitle("Tin nhắn -" + this.user.getUsername());
         this.tblChatModel = (DefaultTableModel) tblChat.getModel();
         try {
-            List<Pair<ChatRoomDTO, Integer>> status = this.rmi.getChatRoomStatusByUser(user);
+            status = this.rmi.getChatRoomStatusByUser(user);
             fillTblChat(status);
         } catch (Exception e) {
             e.printStackTrace();
@@ -83,8 +89,8 @@ class MessagesFrm extends JFrame {
         listStatus.forEach(pair -> {
             ChatRoomDTO key = pair.getKey();
             List<Pair<User, Message>> messages = key.getMessages();
-            System.out.println("A"+messages);
-            if(!messages.isEmpty()){
+            System.out.println("A" + messages);
+            if (!messages.isEmpty()) {
                 Pair<User, Message> lastMessage = messages.get(messages.size() - 1);
                 String lastUser = lastMessage.getKey().getUsername();
                 String lastContent = lastMessage.getValue().getContent();
@@ -116,7 +122,35 @@ class MessagesFrm extends JFrame {
                 new String[]{
                         "Chat", "Message"
                 }
-        ));
+        ) {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        });
+        tblChat.addMouseListener(new MouseAdapter() {
+
+            @Override
+            public void mousePressed(MouseEvent mouseEvent) {
+                JTable table = (JTable) mouseEvent.getSource();
+                Point point = mouseEvent.getPoint();
+                int row = table.rowAtPoint(point);
+                if (mouseEvent.getClickCount() == 2 && table.getSelectedRow() != -1) {
+                    int idx = tblChat.getSelectedRow();
+                    ChatRoomDTO chatRoomDTO = MessagesFrm.status.get(idx).getKey();
+                    try {
+                        MessageController messageController = new MessageController();
+                        messageController.connect(chatRoomDTO.getId(), user, IP);
+                        ChatRoom chatRoom = new ChatRoom(chatRoomDTO, messageController);
+                        System.out.println("Client Side:\n" + chatRoom);
+                        ChatRoomFrm.main(user, chatRoom, rmi);
+                        System.out.println(tblChat.getValueAt(tblChat.getSelectedRow(), 0).toString());
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
         jScrollPane2.setViewportView(tblChat);
 
         jButton1.setText("Tìm");

@@ -3,10 +3,7 @@ package dao;
 import model.ChatRoom;
 import model.User;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,5 +51,19 @@ public class ChatRoomDAO extends DBConnector {
             e.printStackTrace();
         }
         return new ArrayList<>();
+    }
+
+    public void saveChatRoom(ChatRoom chatRoom, int userId) {
+        String sql = "INSERT INTO chatroom VALUES (?,?,?)";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, chatRoom.getId());
+            preparedStatement.setString(2, chatRoom.getName());
+            preparedStatement.setInt(3, userId);
+            preparedStatement.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 }

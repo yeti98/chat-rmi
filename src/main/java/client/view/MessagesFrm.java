@@ -144,7 +144,6 @@ class MessagesFrm extends JFrame {
                         ChatRoom chatRoom = new ChatRoom(chatRoomDTO, messageController);
                         System.out.println("Client Side:\n" + chatRoom);
                         ChatRoomFrm.main(user, chatRoom, rmi);
-                        System.out.println(tblChat.getValueAt(tblChat.getSelectedRow(), 0).toString());
                     } catch (Exception e) {
                         e.printStackTrace();
                     }

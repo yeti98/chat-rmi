@@ -1,7 +1,10 @@
 package control;
 
 import dao.ChatRoomDAO;
+import dto.ChatRoomDTO;
 import model.ChatRoom;
+import model.User;
+import utils.EntityToDTO;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -29,6 +32,7 @@ public class RoomController {
         return null;
     }
 
+
     public List<ChatRoom> getRooms() {
         return rooms;
     }
@@ -44,4 +48,19 @@ public class RoomController {
         rooms.addAll(chatRoomDAO.getAllChatRooms());
     }
 
+    public ChatRoomDTO createNewChatRoom(String name, User user) {
+        ChatRoom chatRoom = new ChatRoom();
+        chatRoom.setName(name);
+        chatRoom.setId(rooms.size()+1);
+        chatRoom.getMembers().add(user);
+        chatRoom.setMessages(new ArrayList<>());
+        chatRoom.setClients(new ArrayList<>());
+        this.saveNewChatRoom(chatRoom, user);
+        rooms.add(chatRoom);
+        return EntityToDTO.chatRoom2ChatRoomDTO(chatRoom);
+    }
+
+    public void saveNewChatRoom(ChatRoom chatRoom, User user) {
+        chatRoomDAO.saveChatRoom(chatRoom, user.getId());
+    }
 }

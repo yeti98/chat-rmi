@@ -15,6 +15,7 @@ import utils.Pair;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.rmi.RemoteException;
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -29,6 +30,7 @@ class SearchFrm extends javax.swing.JFrame {
     private final String IP;
     private final IRMI rmi;
     private JComboBox<Pair<String, ChatRoomDTO>> jComboBox1 = new JComboBox<>();
+    private JTextField txtTaoNhom;
 
     SearchFrm(User user, String IP, IRMI rmi) {
         this.user = user;
@@ -81,7 +83,7 @@ class SearchFrm extends javax.swing.JFrame {
 
         javax.swing.JPanel jPanel1 = new javax.swing.JPanel();
         javax.swing.JTextField jTextField1 = new javax.swing.JTextField();
-        javax.swing.JTextField jTextField2 = new javax.swing.JTextField();
+        txtTaoNhom = new javax.swing.JTextField();
         javax.swing.JLabel jLabel1 = new javax.swing.JLabel();
         javax.swing.JLabel jLabel2 = new javax.swing.JLabel();
         // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -90,12 +92,12 @@ class SearchFrm extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         javax.swing.JSeparator jSeparator1 = new javax.swing.JSeparator();
         javax.swing.JLabel jLabel3 = new javax.swing.JLabel();
-        javax.swing.JButton jButton3 = new javax.swing.JButton();
+        javax.swing.JButton btnTim = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tìm cuộc trò chuyện ");
 
-        jTextField2.addActionListener(this::jTextField2ActionPerformed);
+        txtTaoNhom.addActionListener(this::txtTaoNhomActionPerformed);
 
         jLabel1.setText("Username");
 
@@ -112,7 +114,8 @@ class SearchFrm extends javax.swing.JFrame {
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>());
 
 
-        jButton3.setText("Tạo nhóm");
+        btnTim.setText("Tạo nhóm");
+        btnTim.addActionListener(this::btnTimClickedActionPerformed);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -142,9 +145,9 @@ class SearchFrm extends javax.swing.JFrame {
                                 .addContainerGap()
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtTaoNhom, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton3)
+                                .addComponent(btnTim)
                                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -166,8 +169,8 @@ class SearchFrm extends javax.swing.JFrame {
                                 .addGap(24, 24, 24)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel3)
-                                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jButton3)))
+                                        .addComponent(txtTaoNhom, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btnTim)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -190,6 +193,21 @@ class SearchFrm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnTimClickedActionPerformed(ActionEvent actionEvent) {
+        MessageController messageController = null;
+        ChatRoomDTO chatRoomDTO = null;
+        try {
+            chatRoomDTO = this.rmi.createChatRoom(txtTaoNhom.getText(), user);
+            messageController = new MessageController();
+            messageController.connect(chatRoomDTO.getId(), user, IP);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        ChatRoom chatRoom = new ChatRoom(chatRoomDTO, messageController);
+        System.out.println("Client Side:\n" + chatRoom);
+        ChatRoomFrm.main(user, chatRoom, rmi);
+    }
+
     private void jButton2ActionPerformed(ActionEvent actionEvent) {
         try {
             if (jComboBox1.getSelectedIndex() > -1) {
@@ -208,9 +226,9 @@ class SearchFrm extends javax.swing.JFrame {
         }
     }
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void txtTaoNhomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTaoNhomActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_txtTaoNhomActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:

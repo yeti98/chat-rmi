@@ -95,5 +95,10 @@ public class RemoteMethod extends UnicastRemoteObject implements IRMI {
         Server.getMessageDAO().saveMessage(ms);
     }
 
+    @Override
+    public ChatRoomDTO createChatRoom(String name, User user) throws RemoteException {
+        return Server.getRoomController().createNewChatRoom(name, user);
+    }
+
 
 }

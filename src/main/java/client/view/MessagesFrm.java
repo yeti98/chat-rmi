@@ -49,11 +49,9 @@ class MessagesFrm extends JFrame {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        tblChat.setDefaultRenderer(Object.class, new DefaultTableCellRenderer()
-        {
+        tblChat.setDefaultRenderer(Object.class, new DefaultTableCellRenderer() {
             @Override
-            public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column)
-            {
+            public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
                 final Component c = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
                 c.setBackground(row % 2 == 0 ? Color.LIGHT_GRAY : Color.WHITE);
                 return c;
@@ -100,7 +98,6 @@ class MessagesFrm extends JFrame {
         listStatus.forEach(pair -> {
             ChatRoomDTO key = pair.getKey();
             List<Pair<User, Message>> messages = key.getMessages();
-            System.out.println("A" + messages);
             if (!messages.isEmpty()) {
                 Pair<User, Message> lastMessage = messages.get(messages.size() - 1);
                 String lastUser = lastMessage.getKey().getUsername();

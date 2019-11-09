@@ -27,9 +27,6 @@ import java.util.List;
 class ChatRoomFrm extends javax.swing.JFrame {
 
     private final IRMI rmi;
-    /**
-     * Creates new form NewJFrame3
-     */
     private final User user;
     private final DefaultTableModel tblChatModel;
     private final DefaultTableModel tblUserModel;
@@ -49,7 +46,6 @@ class ChatRoomFrm extends javax.swing.JFrame {
         this.chatRoom = chatRoom;
         this.messageController = chatRoom.getMessageController();
         this.rmi = rmi;
-        System.out.println("Call khoi tao");
         loadOldMessages();
         refreshStatus();
         this.setTitle(chatRoom.getName());

@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="af044c47-be00-49af-b52e-e775929b0c61" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/action/TableCellListener.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/client/view/ChatRoomFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/view/ChatRoomFrm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/view/LoginFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/view/LoginFrm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/client/view/MessagesFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/view/MessagesFrm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/AppProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/AppProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rmi/RemoteMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rmi/RemoteMethod.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -249,7 +247,9 @@
       <workItem from="1572854161764" duration="2648000" />
       <workItem from="1572859410031" duration="406000" />
       <workItem from="1572879558199" duration="454000" />
-      <workItem from="1572881315631" duration="2925000" />
+      <workItem from="1572881315631" duration="3901000" />
+      <workItem from="1573092307178" duration="626000" />
+      <workItem from="1573293962487" duration="293000" />
     </task>
     <servers />
   </component>
